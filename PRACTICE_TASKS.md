@@ -1,33 +1,21 @@
-# MUREX Practice Tasks — Build 2026.09
+# Murex BA Practice — Fresh Sequential Tasks
 
-Use the simulator with simulated data. Do not treat it as an official Murex/MX.3 system or live market feed.
+The simulator starts with **zero student-created trades**. Complete tasks in order and report your result to your tutor before moving on.
 
-## Task 1 — Trade Capture
-Create a USD/INR FX Forward: Buy USD 1M @ 90, value date 11-Dec-2026. Validate and book it. Record the Trade ID.
+1. **Trade Capture** — Create a USD/INR FX Forward: Buy USD 1,000,000 at 90.00, value date 11-Dec-2026. Validate and book. Record Trade ID.
+2. **Trade Verification** — Verify product, book, counterparty, side, notional, rate, trade date and value date.
+3. **Amendment** — Amend the same trade from USD 1,000,000 to USD 1,500,000. Report version, notional and status.
+4. **Lifecycle Impact** — Explain which Middle Office, Back Office and Accounting outputs should change after the amendment.
+5. **MTM** — Using current relevant market rate 92.00, calculate simplified MTM: (market rate − contract rate) × USD notional.
+6. **Market Data** — Inspect USD/INR Bid/Ask and explain which quote a USD buyer uses and why.
+7. **Production Support** — Investigate a case where trade screen shows amended notional but valuation uses the old notional. Write first five investigation steps.
+8. **Settlement** — Identify the reference-data area to investigate when an FX Forward settlement fails.
+9. **Accounting** — Explain Settlement vs Accounting for an FX Forward in 3–4 lines.
+10. **Risk** — Explain VaR, Expected Shortfall, PFE and limit breach; identify the counterparty-exposure measure.
+11. **Configuration** — Write Given/When/Then acceptance criteria for blocking inactive counterparties on FX Forward booking.
+12. **End-to-End BA Case** — Value Date changes from 11-Dec to 20-Dec; trade and valuation update, settlement/accounting remain 11-Dec. Identify first investigation point, teams, root cause hypothesis and regression tests.
 
-## Task 2 — Amendment
-Amend the same trade from USD 1M to USD 1.5M. Explain which modules should change and why.
+## Training rule
+Do not jump ahead or use an answer key. The tutor reviews each result and gives the next task only after the current task is understood.
 
-## Task 3 — MTM
-Assume the relevant current market rate is 92. Calculate the simplified MTM for a Buy USD 1M forward contracted at 90.
-
-## Task 4 — Production Support
-Use the Issue Simulator for VAL-2041. Write the first five investigation steps, the likely root-cause hypothesis, business impact, and three Given/When/Then acceptance criteria.
-
-## Task 5 — Settlement
-Investigate the failed settlement scenario. Identify the likely reference-data area, the downstream impact, and a practical workaround.
-
-## Task 6 — Accounting
-Explain Settlement vs Accounting for the FX Forward in 3–4 lines. Then identify the trade event that could trigger each downstream process.
-
-## Task 7 — Configuration
-Write a business rule: inactive counterparties must not be bookable for FX Forward. Add functional requirement and Given/When/Then acceptance criteria.
-
-## Task 8 — Risk
-Explain VaR, Expected Shortfall, PFE and a limit breach in business language. Identify which one is most directly related to counterparty exposure.
-
-## Task 9 — Data / SQL
-Using the SQL practice starter in Tools, identify the primary key and foreign-key relationships you would expect between TRADE, PRODUCT, COUNTERPARTY, POSITION and PNL.
-
-## Task 10 — End-to-End BA Case
-A trader changes Value Date from 11-Dec to 20-Dec. Trade, valuation and risk show 20-Dec, but settlement and accounting remain on 11-Dec. Identify the first investigation point, impacted teams, root-cause hypothesis, and regression tests.
+The website is an independent educational simulation, not an official Murex installation or live market feed.
